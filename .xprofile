@@ -1,0 +1,5 @@
+redshift &
+setxkbmap en &
+#udiskie -t &
+picom &
+feh --bg-scale --randomize /home/manueld1az/Wallpapers/* &
