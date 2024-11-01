@@ -5,7 +5,7 @@
 # Qtile keybindings
 
 from libqtile.config import Key
-from libqtile.command import lazy
+from libqtile.lazy import lazy
 
 
 mod = "mod4"
@@ -46,7 +46,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "Tab", lazy.prev_layout()),
 
     # Kill window
-    ([mod], "w", lazy.window.kill()),
+    ([mod, "control"], "w", lazy.window.kill()),
 
     # Switch focus of monitors
     ([mod], "period", lazy.next_screen()),
@@ -88,15 +88,9 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ Hardware Configs ------------
 
     # Volume
-    ([], "XF86AudioLowerVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ -5%"
-    )),
-    ([], "XF86AudioRaiseVolume", lazy.spawn(
-        "pactl set-sink-volume @DEFAULT_SINK@ +5%"
-    )),
-    ([], "XF86AudioMute", lazy.spawn(
-        "pactl set-sink-mute @DEFAULT_SINK@ toggle"
-    )),
+    #([], "XF86AudioLowerVolume", lazy.spawn("~/changevolume down")),
+    #([], "XF86AudioRaiseVolume", lazy.spawn("/home/manueld1az/changevolume up")),
+    #([], "XF86AudioMute", lazy.spawn("~/changevolume mute")),
 
     # Brightness if you use a laptop
     #([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%")),

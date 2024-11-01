@@ -86,7 +86,7 @@ primary_widgets = [
 
     icon(bg="color4", text='龍 '),
     
-    widget.Net(**base(bg='color4'), format='{down}{up}', interface='enp4s0', use_Bytes='true'),
+    widget.Net(**base(bg='color4'),width=170, format='{down:6.2f}kb{up:6.2f}kb', interface='enp4s0', prefix='k'),
 
     powerline('color3', 'color4'),
 
@@ -95,7 +95,7 @@ primary_widgets = [
     widget.ThermalSensor(
             background=colors['color3'],
             threshold=50,
-            tag_sensor="gigabyte_wmi-6",
+            tag_sensor="gigabyte_wmi-2",
             fmt='{}',
         ),
 
@@ -104,7 +104,9 @@ primary_widgets = [
     widget.ThermalSensor(
             background=colors['color3'],
             threshold=50,
-            tag_sensor="Tctl",
+            #Sensor del CPU
+            #tag_sensor="Tctl",
+            tag_sensor="gigabyte_wmi-5",
             fmt='{}',
         ),
 

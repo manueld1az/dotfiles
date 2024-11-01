@@ -23,6 +23,8 @@ import subprocess
 @hook.subscribe.startup_once
 def autostart():
     subprocess.call([path.join(qtile_path, 'autostart.sh')])
+    # Inicia AutoKey
+    #subprocess.Popen(['autokey-gtk'])
 
 
 main = None
@@ -34,3 +36,4 @@ cursor_warp = True
 auto_fullscreen = True
 focus_on_window_activation = 'urgent'
 wmname = 'LG3D'
+
