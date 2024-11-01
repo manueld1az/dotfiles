@@ -1,13 +1,13 @@
 # Ignore everything
 /*
-!.gitignore
-!.gitmodules
 
 # Except for the files and folders we want to track
+!.gitignore
+!.gitmodules
 !README.md
 !README.es.md
-!screenshots
 !.config
-!.fzf.zsh
+!.local
 !.xprofile
 !.zshrc
+!.p10k.zsh
